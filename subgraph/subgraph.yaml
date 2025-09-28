@@ -1,0 +1,28 @@
+specVersion: 0.0.5
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: PlexusArchive
+    network: base
+    source:
+      address: "0x52196f568dDCb414006349E09e04947cf0961a90"
+      abi: PlexusArchive
+      startBlock: 36141623
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - Shard
+        - ArchivistTransfer
+        - Archive
+      abis:
+        - name: PlexusArchive
+          file: ./abis/PlexusArchive.json
+      eventHandlers:
+        - event: ShardArchived(indexed uint256,string,string,string,string,string)
+          handler: handleShardArchived
+        - event: ArchivistTransferred(indexed address,indexed address)
+          handler: handleArchivistTransferred
+      file: ./src/plexus-archive.ts

@@ -1,0 +1,28 @@
+type Shard @entity(immutable: true) {
+  id: ID!
+  shardIndex: BigInt!
+  shardTag: String!
+  echoSource: String!
+  earthTime: String!
+  lankaTime: String!
+  archivistLog: String!
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type ArchivistTransfer @entity(immutable: true) {
+  id: ID!
+  previousArchivist: Bytes!
+  newArchivist: Bytes!
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type Archive @entity(immutable: false) {
+  id: ID!
+  totalShards: BigInt!
+  currentArchivist: Bytes!
+  lastUpdated: BigInt!
+}

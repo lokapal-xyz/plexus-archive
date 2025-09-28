@@ -1,0 +1,14 @@
+{
+  "base-sepolia": {
+    "PlexusArchive": {
+      "address": "0xa86F62a21B492325a2a24998c56F9352d565DE00",
+      "startBlock": 31603405
+    }
+  },
+  "base": {
+    "PlexusArchive": {
+      "address": "0x52196f568dDCb414006349E09e04947cf0961a90",
+      "startBlock": 36141623
+    }
+  }
+}

@@ -1,0 +1,56 @@
+[
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "name": "shardIndex",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "name": "shardTag",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "name": "echoSource",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "name": "earthTime",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "name": "lankaTime",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "name": "archivistLog",
+        "type": "string"
+      }
+    ],
+    "name": "ShardArchived",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "name": "previousArchivist",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "name": "newArchivist",
+        "type": "address"
+      }
+    ],
+    "name": "ArchivistTransferred",
+    "type": "event"
+  }
+]
